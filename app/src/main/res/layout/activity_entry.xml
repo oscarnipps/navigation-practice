@@ -13,6 +13,17 @@
         android:orientation="vertical">
 
         <com.google.android.material.button.MaterialButton
+            android:onClick="openBasicNavigationDemo"
+            android:padding="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/raleway_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Basic Navigation "
+            android:layout_gravity="center"/>
+
+        <com.google.android.material.button.MaterialButton
             android:onClick="openNavigationDrawerDemo"
             android:padding="16dp"
             android:layout_marginTop="32dp"
@@ -31,7 +42,7 @@
             android:fontFamily="@font/raleway_medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="navigation with bottom navigation view"
+            android:text="navigation with bottom navigation"
             android:layout_gravity="center"/>
 
         <com.google.android.material.button.MaterialButton

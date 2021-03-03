@@ -6,6 +6,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.navigation_practice.practicewithbasicnavigation.BasicNavActivity;
 import com.example.navigation_practice.practicewithbottomnavigationview.BottomNavActivity;
 import com.example.navigation_practice.practicewithnavigationdrawer.NavDrawerActivity;
 import com.example.navigation_practice.practicewithviewpager2.ViewPagerActivity;
@@ -30,6 +31,11 @@ public class EntryActivity extends AppCompatActivity {
 
     public void openViewPagerDemo(View view) {
         Intent intent = new Intent(this, ViewPagerActivity.class);
+        startActivity(intent);
+    }
+
+    public void openBasicNavigationDemo(View view) {
+        Intent intent = new Intent(this, BasicNavActivity.class);
         startActivity(intent);
     }
 }

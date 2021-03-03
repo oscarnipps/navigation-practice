@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#58E3E3"
+        >
+
+        <TextView
+            android:id="@+id/second_fragment"
+            android:textColor="#774242"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
+            android:fontFamily="@font/raleway_medium"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Second Fragment" />
+
+    </FrameLayout>
+</layout>
