@@ -6,23 +6,28 @@
     app:startDestination="@id/firstFragment">
 
     <fragment
-        tools:layout="@layout/fragment_first"
         android:id="@+id/firstFragment"
         android:name="com.example.navigation_practice.practicewithbasicnavigation.FirstFragment"
-        android:label="FirstFragment" >
+        android:label="FirstFragment"
+        tools:layout="@layout/fragment_first">
         <action
             android:id="@+id/navigateToSecondFragment"
             app:destination="@id/secondFragment" />
     </fragment>
 
     <fragment
-        tools:layout="@layout/fragment_second"
         android:id="@+id/secondFragment"
         android:name="com.example.navigation_practice.practicewithbasicnavigation.SecondFragment"
-        android:label="SecondFragment" >
+        android:label="SecondFragment"
+        tools:layout="@layout/fragment_second">
         <action
             android:id="@+id/navigateToFirstFragment"
             app:destination="@id/firstFragment" />
+        <argument
+            android:name="user"
+            app:argType="com.example.navigation_practice.practicewithbasicnavigation.User"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
 
 </navigation>

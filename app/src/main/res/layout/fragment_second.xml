@@ -1,22 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="userModel"
+            type="com.example.navigation_practice.practicewithbasicnavigation.User"/>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#58E3E3"
         >
 
-        <TextView
+        <Button
             android:id="@+id/second_fragment"
-            android:textColor="#774242"
-            android:gravity="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="88dp"
             android:fontFamily="@font/raleway_medium"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Second Fragment" />
+            android:gravity="center"
+            android:text="Go To First Fragment"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#774242"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vehicles" />
 
-    </FrameLayout>
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/raleway_medium"
+            android:gravity="center"
+            android:text="@{userModel.name}"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#774242"
+            android:textStyle="bold"
+            app:drawableTopCompat="@drawable/ic_person"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.349"
+            tools:text="audrey graham" />
+
+        <TextView
+            android:id="@+id/vehicles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/raleway_medium"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#774242"
+            android:textStyle="bold"
+            android:text="@{String.valueOf(userModel.vehicles) }"
+            app:layout_constraintEnd_toEndOf="@+id/name"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            tools:text="12"
+            app:drawableTopCompat="@drawable/ic_shuttle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

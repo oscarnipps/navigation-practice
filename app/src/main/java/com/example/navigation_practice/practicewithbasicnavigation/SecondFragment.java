@@ -15,6 +15,8 @@ import com.example.navigation_practice.databinding.FragmentSecondBinding;
 public class SecondFragment extends Fragment {
 
     private FragmentSecondBinding binding;
+    private SecondFragmentArgs fragmentArgs;
+    private User mUser;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,14 @@ public class SecondFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_second,container,false);
+
+        fragmentArgs = SecondFragmentArgs.fromBundle(getArguments());
+
+        mUser = fragmentArgs.getUser();
+
+        binding.setLifecycleOwner(this);
+
+        binding.setUserModel(mUser);
 
         binding.secondFragment.setOnClickListener(v -> Navigation.findNavController(binding.getRoot()).navigate(R.id.navigateToFirstFragment));
 

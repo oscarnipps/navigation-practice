@@ -25,8 +25,16 @@ public class FirstFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_first,container,false);
 
-        binding.firstFragment.setOnClickListener(v -> Navigation.findNavController(binding.getRoot()).navigate(R.id.navigateToSecondFragment));
+       FirstFragmentDirections.NavigateToSecondFragment actions = FirstFragmentDirections.navigateToSecondFragment();
+
+        actions.setUser(getUser());
+
+        binding.firstFragment.setOnClickListener(v -> Navigation.findNavController(binding.getRoot()).navigate(actions));
 
         return binding.getRoot();
+    }
+
+    private User getUser() {
+        return new User("david blake johnson" ,8);
     }
 }
