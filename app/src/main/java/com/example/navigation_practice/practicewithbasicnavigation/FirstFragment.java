@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
 import com.example.navigation_practice.R;
 import com.example.navigation_practice.databinding.FragmentFirstBinding;
@@ -23,18 +22,18 @@ public class FirstFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_first,container,false);
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_first, container, false);
 
-       FirstFragmentDirections.NavigateToSecondFragment actions = FirstFragmentDirections.navigateToSecondFragment();
+        /*FirstFragmentDirections.NavigateToSecondFragment actions = FirstFragmentDirections.navigateToSecondFragment();
 
         actions.setUser(getUser());
 
-        binding.firstFragment.setOnClickListener(v -> Navigation.findNavController(binding.getRoot()).navigate(actions));
+        binding.firstFragment.setOnClickListener(v -> Navigation.findNavController(binding.getRoot()).navigate(actions));*/
 
         return binding.getRoot();
     }
 
     private User getUser() {
-        return new User("david blake johnson" ,8);
+        return new User("david blake johnson", 8);
     }
 }
