@@ -51,9 +51,13 @@ public class BasicNavActivity extends AppCompatActivity   {
                 .setOpenableLayout(drawerLayout)
                 .build();
 
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        NavigationUI.setupActionBarWithNavController(this, navController,appBarConfiguration);
 
-        NavigationUI.setupWithNavController(binding.toolbar, navController,drawerLayout);
+       NavigationUI.setupWithNavController(binding.toolbar, navController,drawerLayout);
     }
 
+    @Override
+    public boolean onSupportNavigateUp() {
+        return NavigationUI.navigateUp(navController,appBarConfiguration);
+    }
 }
