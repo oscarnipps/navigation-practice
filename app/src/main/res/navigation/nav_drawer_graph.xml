@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.example.navigation_practice.SettingsFragment"
+        android:name="com.example.navigation_practice.practicewithnavigationdrawer.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
 </navigation>

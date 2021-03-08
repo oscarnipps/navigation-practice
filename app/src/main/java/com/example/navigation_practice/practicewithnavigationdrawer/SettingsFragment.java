@@ -1,12 +1,13 @@
-package com.example.navigation_practice;
+package com.example.navigation_practice.practicewithnavigationdrawer;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
+
+import com.example.navigation_practice.R;
 
 /**
  * A simple {@link Fragment} subclass.
